@@ -1,0 +1,119 @@
+/* RESET AND GENERAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #f6f1f1;
+  --color-secondary: #146c94;
+  --color-accent: #19a7ce;
+}
+
+body {
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  height: 100vh;
+  justify-content: center;
+  padding: 1rem;
+  width: 100vw;
+}
+
+label,
+button,
+input {
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+}
+
+input {
+  accent-color: var(--color-accent);
+}
+
+button,
+i {
+  cursor: pointer;
+}
+
+button {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: bold;
+  padding: 0.65rem 1rem;
+}
+
+i:hover {
+  color: var(--color-accent);
+}
+/* APP STYLES */
+.pass-box,
+.control-box {
+  background-color: var(--color-black-lite);
+  box-shadow: 0 1px 1px 1.5px var(--color-accent);
+  max-width: 450px;
+  padding: 2.45rem;
+  width: 100%;
+}
+
+.pass-box {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.pass-el,
+.pass-box i {
+  font-size: 120%;
+}
+
+.pass-el {
+  opacity: 0.45;
+  overflow: hidden;
+}
+
+.pass-el.active {
+  opacity: 1;
+}
+
+.control-box,
+.control-options,
+.length-el {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.length-el {
+  align-items: center;
+  font-weight: bold;
+  gap: 1rem;
+}
+.length-el label {
+  font-size: 120%;
+}
+
+.control-box,
+.control-options {
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  .pass-box,
+  .control-box {
+    padding: 1rem;
+  }
+
+  .length-el {
+    flex-direction: column;
+  }
+}

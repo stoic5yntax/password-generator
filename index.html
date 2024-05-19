@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- generated password -->
+    <div class="pass-box">
+      <div class="pass-el" id="pass-el"></div>
+      <i class="bi bi-clipboard2-fill" id="copy-btn"></i>
+    </div>
+
+    <!-- controls -->
+    <div class="control-box">
+      <div class="length-el">
+        Select the password length
+        <input
+          type="range"
+          min="6"
+          max="18"
+          value="8"
+          name="length-slider"
+          id="length-slider"
+        />
+        <label for="length-slider" id="length-value"></label>
+      </div>
+      <div class="control-options">
+        <div>
+          <input type="checkbox" name="uppercase" id="uppercase" checked />
+          <label for="uppercase">uppercase</label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="lowercase" id="lowercase" checked />
+          <label for="lowercase">lowercase</label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="numbers" id="numbers" checked />
+          <label for="numbers">numbers</label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="symbols" id="symbols" checked />
+
+          <label for="symbols">symbols</label>
+        </div>
+      </div>
+      <button class="generate-btn" id="generate-btn">generate</button>
+    </div>
+  </body>
+</html>
